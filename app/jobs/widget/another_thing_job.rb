@@ -1,4 +1,4 @@
-class Widget::GrossIncomeJob < ApplicationJob
+class Widget::AnotherThingJob < ApplicationJob
   queue_as :default
 
   def perform(id:)
@@ -9,13 +9,13 @@ class Widget::GrossIncomeJob < ApplicationJob
   private
 
   def class_name
-    "GrossIncome"
+    "AnotherThing"
   end
 
   def render_template
     ApplicationController.render(
-      partial: "dashboard/widgets/gross_income",
-      locals: { widget: Widget::GrossIncome.new(some: "stuff", might: "need to be passed") }
+      partial: "dashboard/widgets/another_thing",
+      locals: { widget: Widget::AnotherThing.new(some: "stuff", might: "need to be passed") }
     )
   end
 end

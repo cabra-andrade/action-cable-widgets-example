@@ -10,8 +10,9 @@ export default class extends Controller {
   connect() {
     console.log(`Connecting to ${this.classNameValue}Channel with id ${this.idValue}`);
     this.params = {
-      channel: `Widget::${this.classNameValue}Channel`,
-      id: this.idValue // some random id for testing purposes
+      channel: `WidgetLoaderChannel`,
+      id: this.idValue, // some random id for testing purposes
+      class_name: this.classNameValue
     }
 
     this.channel = consumer.subscriptions.create(this.params, {
@@ -21,7 +22,7 @@ export default class extends Controller {
   }
 
   #cableConnected() {
-    console.log(`Connected succesfully to GrossIncomeChannel on id ${this.params.id}`);
+    console.log(`Connected succesfully to ${this.classNameValue}Channel on id ${this.params.id}`);
   }
 
   #cableReceived(data) {
