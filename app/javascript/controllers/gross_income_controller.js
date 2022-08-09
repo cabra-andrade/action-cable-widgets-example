@@ -20,6 +20,6 @@ export default class extends Controller {
   }
 
   #cableReceived(data) {
-    console.log(data);
+    this.element.outerHTML = data.template
   }
 }

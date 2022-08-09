@@ -3,6 +3,6 @@ class Widget::GrossIncomeJob < ApplicationJob
 
   def perform(id:)
     sleep 2
-    Widget::GrossIncomeChannel.broadcast_to("some-stuff-#{id}", "hello")
+    Widget::GrossIncomeChannel.broadcast_to("some-stuff-#{id}", template: "<div>hello</div>")
   end
 end
