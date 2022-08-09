@@ -2,11 +2,16 @@ import { Controller } from "@hotwired/stimulus"
 import consumer from "../channels/consumer"
 
 export default class extends Controller {
+  static values = {
+    id: Number,
+    className: String
+  }
+
   connect() {
-    console.log("Connecting to gross income channel.");
+    console.log(`Connecting to ${this.classNameValue}Channel with id ${this.idValue}`);
     this.params = {
-      channel: "Widget::GrossIncomeChannel",
-      id: Number((Math.random() * 10000).toFixed(), 10) // some random id for testing purposes
+      channel: `Widget::${this.classNameValue}Channel`,
+      id: this.idValue // some random id for testing purposes
     }
 
     this.channel = consumer.subscriptions.create(this.params, {
