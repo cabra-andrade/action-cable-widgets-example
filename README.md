@@ -8,7 +8,7 @@ the merged code.
 
 At the same time, there's potential for MORE abstraction to remove some of the repetition (with
 inheritance and some meta programming), I'm aware of this. Keep in mind that this is a proof of
-concept from someone who has limited knowledge of the actual currently implementation. So, initially,
+concept from someone who has limited knowledge of the actual current implementation. So, initially,
 I'd rather have MORE repetition than risk delving into abstractions too early and risk making some
 spaghetti code nonsense.
 
