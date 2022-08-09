@@ -13,7 +13,7 @@ I'd rather have MORE repetition than risk delving into abstractions too early an
 spaghetti code nonsense.
 
 If anything... maybe I already started with too much abstraction. I hope the potential is clear from
-this example tho. \,,/
+this example tho. 🤘
 
 # Running
 ```shell
