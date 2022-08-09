@@ -1,4 +1,18 @@
-<h1>Dashboard</h1>
+<h1>Dashboard Widget Loader with separate Jobs</h1>
+
+<p>
+  On page load, both of those loaders below get connected to the loader channel and start their
+  respective Job classes (Widget::AnotherThingJob or Widget::GrossIncomeJob). When the jobs finish
+  they call a broadcast to the correct loader channel with their correspoding template, which gets
+  replaced as the new outerHTML of the loader.
+</p>
+
+<p>
+  There is a lot of abstraction potential in here (inheritance and some meta programming), I'm aware
+  of this. Thing is... this is a proof of concept and I currently have limited knowledge of the actual
+  code. I'd rather have MORE repetition now, than risk delving into abstraction too early and risk making
+  some spaghetti code.
+</p>
 
 <%= render "dashboard/widgets/loader", widget: @dashboard.gross_income %>
 <%= render "dashboard/widgets/loader", widget: @dashboard.another_thing %>
