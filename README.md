@@ -14,3 +14,10 @@ spaghetti code nonsense.
 
 If anything... maybe I already started with too much abstraction. I hope the potential is clear from
 this example tho. \,,/
+
+# Running
+```shell
+bundle install
+yarn install
+rails s
+```
