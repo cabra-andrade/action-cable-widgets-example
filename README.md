@@ -21,3 +21,8 @@ bundle install
 yarn install
 rails s
 ```
+
+Also, make sure your redis server is running locally (on another tab as the rails server). Usually this will do:
+```shell
+redis-server
+```
